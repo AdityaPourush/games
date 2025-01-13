@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="scoreboard">
+          <div class="score">
+            <span id="userScore">0</span>
+            <p>You</p>
+          </div>
+          <div class="score">
+            <span id="computerScore"></span>
+          </div>
+        </div>
+        <div class="selection-area">
+          <div id="userChoice"></div>
+          <div id="computerChoice"></div>
+        </div>
+        <div class="choices">
+          <button class="choice-btn" data-choice="rock">✊</button>
+          <button class="choice-btn" data-choice="paper">✋</button>
+          <button class="choice-btn" data-choice="scissor">✌️</button>
+        </div>
+        <div class="result" id="result"></div>
+        <button class="reset-btn" id="resetBtn"></button>
+      </div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
