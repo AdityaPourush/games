@@ -17,7 +17,8 @@
             <p>You</p>
           </div>
           <div class="score">
-            <span id="computerScore"></span>
+            <span id="computerScore">0</span>
+            <p>Computer</p>
           </div>
         </div>
         <div class="selection-area">
@@ -25,12 +26,12 @@
           <div id="computerChoice"></div>
         </div>
         <div class="choices">
-          <button class="choice-btn" data-choice="rock">✊</button>
-          <button class="choice-btn" data-choice="paper">✋</button>
-          <button class="choice-btn" data-choice="scissor">✌️</button>
+          <button class="choice-btn" data-choice="rock" title="rock">✊</button>
+          <button class="choice-btn" data-choice="paper" title="paper">✋</button>
+          <button class="choice-btn" data-choice="scissor" title="scissors">✌️</button>
         </div>
         <div class="result" id="result"></div>
-        <button class="reset-btn" id="resetBtn"></button>
+        <button class="reset-btn" id="resetBtn">Reset</button>
       </div>
     </div>
     <script type="module" src="./main.ts"></script>
