@@ -27,8 +27,8 @@ function determineWinner(userChoice: Choice, computerChoice: Choice): Result {
         return 'tie';
     }
     else if(
-        (userChoice == 'rock' && computerChoice === 'scissors') ||
-        (userChoice == 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
         (userChoice === 'scissors' && computerChoice === 'paper')
     ){
         return 'win';
