@@ -46,6 +46,19 @@ function flipcard(this: HTMLElement): void {
   }
 }
 
+function checkForWin(): void {
+  const matchedCards = document.querySelectorAll('.matched');
+  if(matchedCards.length === cardValues.length) {
+    const congratsMessage = document.createElement('div');
+    congratsMessage.classList.add('congrats-message');
+    // congratsMessage.innerHTML = `
+    //   <h2>Congratulations! You Won</h2>
+    //   `
+    congratsMessage.innerText = 'Congrats! You Won';
+    document.querySelector('main')?.appendChild(congratsMessage);
+  }
+}
+
 function checkForMatch(): void {
   const [card1, card2] = flippedCards;
   const value1 = card1.dataset.value;
@@ -55,6 +68,7 @@ function checkForMatch(): void {
     card1.classList.add('matched');
     card2.classList.add('matched');
     updateScore();
+    checkForWin();
   }
   else {
     card1.classList.remove('flipped');
